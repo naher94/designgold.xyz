@@ -52,6 +52,12 @@ img {
 iframe {
   height: 600px; }
 
+header {
+  background: #231F20;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
 .nav {
   color: white;
   /*margin: 10px;*/
