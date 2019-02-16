@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900");
+body {
+  font-family: "Lato", sans-serif;
+  color: #313131;
+  font-weight: 700; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Lato", sans-serif;
+  padding-left: 10px; }
+
+h4 {
+  font-weight: 700;
+  margin-top: 50px; }
+
+article.post {
+  width: 100%; }
+
+::selection {
+  color: #313131;
+  background: #F8EC23; }
+
+/* Code for Firefox */
+::-moz-selection {
+  color: #313131;
+  background: #F8EC23; }
+
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none; }
+
+.quote {
+  font-size: 64px;
+  line-height: 60px;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.dateStamp {
+  font-size: 22px;
+  margin-top: -15px;
+  font-weight: 400;
+  margin-bottom: 20px; }
+
+iframe {
+  height: 600px; }
+
+.nav {
+  color: white;
+  /*margin: 10px;*/
+  padding: 14px;
+  font-weight: 700;
+  height: inherit; }
+
+.nav:hover {
+  color: white;
+  background-color: #680032; }
+
+.navbar {
+  background-color: #F8EC23;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch; }
+
+.navscroll {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+
+.navbar::-webkit-scrollbar {
+  display: none; }
+
+.navscroll::-webkit-scrollbar {
+  display: none; }
+
+footer {
+  margin-top: 50px;
+  background-color: #ececec;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px; }
