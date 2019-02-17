@@ -51,15 +51,18 @@ iframe {
 
 .page-heading {
   font-size: 24px;
-  font-weight: 900; }
+  font-weight: 900;
+  padding-left: 0; }
 
 .page-subheading {
-  font-size: 20px; }
+  font-size: 20px;
+  padding-left: 0; }
 
 .post-list {
-  margin-top: 40px; }
+  margin-top: 60px; }
   .post-list li h2 {
-    padding-left: 0; }
+    padding-left: 0;
+    font-size: 30px; }
     .post-list li h2 a {
       color: #231F20; }
 

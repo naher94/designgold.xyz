@@ -85,17 +85,20 @@ iframe {
 .page-heading{
   font-size: 24px;
   font-weight: $black;
+  padding-left: 0;
 }
 
 .page-subheading{
   font-size: 20px;
+  padding-left: 0;
 }
 
 .post-list{
-  margin-top: 40px;
+  margin-top: 60px;
   li{
     h2{
       padding-left: 0;
+      font-size: 30px;
       a{
         color: $black-gold;
       }
