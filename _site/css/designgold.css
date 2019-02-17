@@ -60,6 +60,17 @@ header {
     padding: 40px; }
   header a {
     display: block; }
+    header a p {
+      color: #F8EC23; }
+    header a:hover {
+      text-decoration: none; }
+  header .subscribe {
+    margin-top: 100px; }
+    header .subscribe .service img {
+      width: 60px;
+      padding: 10px; }
+    header .subscribe .service .name {
+      margin-top: 15px; }
   header .hosts {
     margin-top: 100px; }
     header .hosts .host {
@@ -72,15 +83,12 @@ header {
       margin-top: 15px; }
     header .hosts p {
       margin-bottom: 0; }
-    header .hosts a p {
-      color: #F8EC23; }
-    header .hosts a:hover {
-      text-decoration: none; }
   header h1, header p {
     color: white; }
   header h1 {
     font-size: 26px;
-    padding-left: 0; }
+    padding-left: 0;
+    margin-bottom: 20px; }
 
 .nav {
   color: white;

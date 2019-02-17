@@ -4,11 +4,34 @@
       <a class="logo" href="{{ site.baseurl }}/"><img src="img/logo.svg" alt="Design Gold Logo"></a>
       
       <div class="subscribe">
-        <h1>Subscribe In</h1>
+        <h1>Subscribe at</h1>
+        
+        <a href="#">
+          <div class="service grid-x">
+            <div class="icon-container medium-3">
+              <img src="img/applepodcast.svg">
+            </div>
+            <div class="name medium-9">
+              <p>Apple Podcast</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+          <div class="service grid-x">
+            <div class="icon-container medium-3">
+              <img src="img/rss.svg">
+            </div>
+            <div class="name medium-9">
+              <p>RSS Feed</p>
+            </div>
+          </div>
+        </a>
+        
       </div>
       
       <div class="hosts">
-        <h1>Hosted By</h1>
+        <h1>Hosted by</h1>
         <div class="host grid-x">
           <div class="cell medium-4">
             <img src="img/rehan.png">

@@ -98,6 +98,25 @@ header{
   
   a{
     display: block;
+    p{
+      color: $gold;  
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  
+  .subscribe{
+    margin-top: 100px;
+    .service{
+      img{
+        width: 60px;
+        padding: 10px;
+      }
+      .name{
+        margin-top: 15px;
+      }
+    }
   }
   
   .hosts{
@@ -118,14 +137,6 @@ header{
     p{
       margin-bottom: 0;
     }
-    a{
-      p{
-        color: $gold;  
-      }
-      &:hover{
-        text-decoration: none;
-      }
-    }
 
   }
   
@@ -136,6 +147,7 @@ header{
   h1{
     font-size: 26px;
     padding-left: 0;
+    margin-bottom: 20px;
   }
 }
 
