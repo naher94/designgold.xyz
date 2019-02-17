@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="home">
+<div class="home cell medium-8">
 
   <h1 class="page-heading">Design Gold</h1>
   <h2 class="page-subheading">{{ site.description }}</h2>
@@ -16,9 +16,10 @@ layout: default
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
         
-        <p>
-        {{post.content}}
-        </p>
+        <p>{{post.content}}</p>
+        
+        {% assign youtubelink = {{post.youtube}} | split: "=" %}
+        <iframe src="https://www.youtube.com/embed/{{ youtubelink[1] }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </li>
     {% endfor %}
   </ul>
