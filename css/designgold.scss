@@ -89,13 +89,54 @@ iframe {
 
 header{
   background: $black-gold;
-//  content: "";
-//  display: block;
-  top: 0;
-  left: 0;
-  bottom: 0;
-//  right: 0;
-//  position: absolute;
+  height: 100vh;
+  
+  .content{
+    float: right;
+    padding: 40px;
+  }
+  
+  a{
+    display: block;
+  }
+  
+  .hosts{
+    margin-top: 100px;
+    .host{
+     margin-bottom: 20px; 
+    }
+    img{
+      width: 130px;
+      border-radius: 100%;
+      padding: 10px;
+    }
+    
+    .name{
+      margin-top: 15px;
+    }
+    
+    p{
+      margin-bottom: 0;
+    }
+    a{
+      p{
+        color: $gold;  
+      }
+      &:hover{
+        text-decoration: none;
+      }
+    }
+
+  }
+  
+  h1,p{
+    color: white;
+  }
+  
+  h1{
+    font-size: 26px;
+    padding-left: 0;
+  }
 }
 
 .nav {
@@ -140,20 +181,6 @@ header{
   display: none;
 }
 //******* End of Header Styling
-
-
-
-//******* Footer Styling
-
-footer {
-  margin-top: 50px;
-  background-color: #ececec;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-//******* End of Footer Styling
 
 
 

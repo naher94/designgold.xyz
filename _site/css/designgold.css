@@ -54,9 +54,33 @@ iframe {
 
 header {
   background: #231F20;
-  top: 0;
-  left: 0;
-  bottom: 0; }
+  height: 100vh; }
+  header .content {
+    float: right;
+    padding: 40px; }
+  header a {
+    display: block; }
+  header .hosts {
+    margin-top: 100px; }
+    header .hosts .host {
+      margin-bottom: 20px; }
+    header .hosts img {
+      width: 130px;
+      border-radius: 100%;
+      padding: 10px; }
+    header .hosts .name {
+      margin-top: 15px; }
+    header .hosts p {
+      margin-bottom: 0; }
+    header .hosts a p {
+      color: #F8EC23; }
+    header .hosts a:hover {
+      text-decoration: none; }
+  header h1, header p {
+    color: white; }
+  header h1 {
+    font-size: 26px;
+    padding-left: 0; }
 
 .nav {
   color: white;
@@ -93,10 +117,3 @@ header {
 
 .navscroll::-webkit-scrollbar {
   display: none; }
-
-footer {
-  margin-top: 50px;
-  background-color: #ececec;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
