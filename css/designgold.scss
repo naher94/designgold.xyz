@@ -109,7 +109,7 @@ iframe {
 
 header{
   background: $black-gold;
-  height: 100vh;
+  height: 100%; /* JC's change from 100vh */
   
   .content{
     float: right;
