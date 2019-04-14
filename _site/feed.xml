@@ -6,20 +6,9 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 13 Apr 2019 20:03:10 -0400</pubDate>
-    <lastBuildDate>Sat, 13 Apr 2019 20:03:10 -0400</lastBuildDate>
+    <pubDate>Sun, 14 Apr 2019 15:08:44 -0400</pubDate>
+    <lastBuildDate>Sun, 14 Apr 2019 15:08:44 -0400</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
-    
-      <item>
-        <title>Companion App Crutch</title>
-        <description>&lt;p&gt;You’ll find this post in your post directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 22 Feb 2016 12:10:15 -0500</pubDate>
-        <link>http://localhost:4000/2016/02/22/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/02/22/welcome-to-jekyll.html</guid>
-        
-        
-      </item>
     
   </channel>
 </rss>

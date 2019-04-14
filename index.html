@@ -8,18 +8,18 @@ layout: default
   <h2 class="page-subheading">{{ site.description }}</h2>
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for episode in site.episodes %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-meta">{{ episode.date | date: "%b %-d, %Y" }} • Episode {{episode.number}}</span>
 
         <h2>
-          {{ post.title }}
+          {{ episode.title }}
 <!--          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>-->
         </h2>
         
-        <p>{{post.content}}</p>
+        <p>{{episode.content}}</p>
         
-        {% assign youtubelink = {{post.youtube}} | split: "=" %}
+        {% assign youtubelink = {{episode.youtube}} | split: "=" %}
         <iframe src="https://www.youtube.com/embed/{{ youtubelink[1] }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </li>
     {% endfor %}
