@@ -112,3 +112,15 @@ header {
     font-size: 26px;
     padding-left: 0;
     margin-bottom: 20px; }
+
+@media screen and (max-width: 40em) {
+  .subscribe {
+    display: none; }
+
+  .hosts {
+    display: none; }
+
+  header {
+    height: 100%; }
+    header .content {
+      float: none; } }
