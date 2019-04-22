@@ -8,7 +8,8 @@ layout: default
   <h2 class="page-subheading">{{ site.description }}</h2>
 
   <ul class="post-list">
-    {% for episode in site.episodes %}
+    {% assign episode_order = site.episodes | sort: 'date' | reverse %}
+    {% for episode in episode_order %}
       <li>
         <span class="post-meta">{{ episode.date | date: "%b %-d, %Y" }} • Episode {{episode.number}}</span>
 
