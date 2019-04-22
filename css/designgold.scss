@@ -119,9 +119,11 @@ iframe {
 //******* Header Styling
 
 header{
-  position: fixed;
   background: $black-gold;
   height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
   
   .content{
     float: right;
@@ -199,6 +201,7 @@ header{
   }
   header{
     height: 100%;
+    position: static;
     .content{
       float: none;
     }
@@ -208,6 +211,8 @@ header{
 
 // Tablet Styling
 @media screen and (max-width: 64em) {
-  
+  header{
+    position: static;
+  }
 }
 //******* End of Mobile Styling
