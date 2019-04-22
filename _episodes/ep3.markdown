@@ -2,7 +2,7 @@
 layout: post
 title:  "Designing Security"
 date:   2019-04-20 12:00:00 -0500
-youtube: https://youtu.be/wgBNV3lOcPA
+youtube: https://www.youtube.com/watch?v=wgBNV3lOcPA
 number: 3
 
 ---

@@ -2,7 +2,7 @@
 layout: post
 title:  "Door Handles: Push it, Twist it, Pull it"
 date:   2019-04-18 12:00:00 -0500
-youtube: https://youtu.be/vTZXv3-gQa4
+youtube: https://www.youtube.com/watch?v=vTZXv3-gQa4
 number: 1
 
 ---

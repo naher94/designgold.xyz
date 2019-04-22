@@ -2,7 +2,7 @@
 layout: post
 title:  "Context-Aware Video"
 date:   2019-04-21 12:00:00 -0500
-youtube: https://youtu.be/ZrtkfhPAtKY
+youtube: https://www.youtube.com/watch?v=ZrtkfhPAtKY
 number: 4
 
 ---

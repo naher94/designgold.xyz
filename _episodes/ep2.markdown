@@ -2,7 +2,7 @@
 layout: post
 title:  "Why does everything need an app?!?!"
 date:   2019-04-19 12:00:00 -0500
-youtube: https://youtu.be/6Yxwj4lmTxA
+youtube: https://www.youtube.com/watch?v=6Yxwj4lmTxA
 number: 2
 
 ---
