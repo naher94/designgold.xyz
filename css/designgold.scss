@@ -119,6 +119,7 @@ iframe {
 //******* Header Styling
 
 header{
+  position: fixed;
   background: $black-gold;
   height: 100vh;
   
@@ -190,7 +191,19 @@ header{
 // Measurments pulled from foundation css file
 // Mobile Styling
 @media screen and (max-width: 40em) {
-
+  .subscribe{
+    display: none;
+  }
+  .hosts{
+    display: none;
+  }
+  header{
+    height: 100%;
+    .content{
+      float: none;
+    }
+  }
+  
 }
 
 // Tablet Styling

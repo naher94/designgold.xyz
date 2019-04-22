@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Companion App Crutch"
-date:   2016-02-22 12:10:15 -0500
-youtube: https://www.youtube.com/watch?v=Ls0fdUr885E
+title:  "Why does everything need an app?!?!"
+date:   2019-04-19 12:00:00 -0500
+youtube: https://youtu.be/6Yxwj4lmTxA
 number: 2
 
 ---
 
-You’ll find this post in your post directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run.
+Why is it that everything need an app from toasters to skateboards? In this episode we discuss the ramifications of product organizations relying on companion apps and how that effects the user experience of their hardware product. How can we build companion apps that build on top of the already great experience of the product?
