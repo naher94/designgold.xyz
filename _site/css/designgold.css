@@ -76,6 +76,7 @@ iframe {
       color: #231F20; }
 
 header {
+  position: fixed;
   background: #231F20;
   height: 100vh; }
   header .content {
