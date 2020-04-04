@@ -75,6 +75,9 @@ img {
   .hosts p {
     margin-bottom: 0; }
 
+.error-page h1 {
+  font-size: 3em; }
+
 header {
   padding: 2.5em;
   padding-top: 5em;
@@ -85,4 +88,9 @@ header {
 @media screen and (max-width: 40em) {
   .intro h2 {
     font-size: 1.4em;
-    line-height: 1em; } }
+    line-height: 1em; }
+
+  .error-page h1 {
+    font-size: 2.5em; }
+  .error-page h2 {
+    font-size: 1.8em; } }
