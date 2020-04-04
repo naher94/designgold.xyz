@@ -3,19 +3,17 @@
 
   {% include head.html %}
 
-  <body class="">
+  <body class="grid-container">
 
-    <div class="grid-x">
-      <div class="cell medium-4 large-5">
-        {% include header.html %}
-      </div>
-      <div class="cell medium-8 large-7 grid-x">
+    {% include header.html %}
+    <div class="grid-x content-container">
+      <div class="cell auto"></div>
+      <div class="cell small-12 medium-8">
         {{ content }}
       </div>
+      <div class="cell auto"></div>
     </div>
-
     {% include footer.html %}
-
   </body>
 
 </html>

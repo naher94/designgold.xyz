@@ -1,31 +1,37 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,900");
 body {
   font-family: "Lato", sans-serif;
-  color: #313131;
-  font-weight: 700; }
+  color: #FFFFFF;
+  font-weight: 700;
+  background: #231F20;
+  font-size: 16px; }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Lato", sans-serif;
-  padding-left: 10px; }
+  font-family: "Lato", sans-serif; }
 
-h4 {
-  font-weight: 700;
-  margin-top: 50px; }
-
-article.post {
-  width: 100%; }
+h1 {
+  font-size: 2em;
+  font-weight: 700; }
 
 ::selection {
-  color: #313131;
+  color: #231F20;
   background: #F8EC23; }
 
 /* Code for Firefox */
 ::-moz-selection {
-  color: #313131;
+  color: #231F20;
   background: #F8EC23; }
+
+a img:hover {
+  opacity: 0.7; }
+a p {
+  color: #F8EC23; }
+  a p:hover {
+    text-decoration: none;
+    color: #afa606; }
 
 img {
   -webkit-touch-callout: none;
@@ -37,97 +43,46 @@ img {
   -moz-user-select: none;
   -webkit-user-drag: none; }
 
-.dateStamp {
-  font-size: 22px;
-  margin-top: -15px;
-  font-weight: 400;
-  margin-bottom: 20px; }
+.content-container {
+  margin-top: 4em;
+  margin-bottom: 6em; }
 
-iframe {
-  width: 100%; }
+.intro h2 {
+  font-size: 2em;
+  line-height: 1.2em; }
 
-.home {
-  padding: 40px; }
+.listen {
+  margin-top: 6em;
+  text-align: center; }
+  .listen h1 {
+    margin-bottom: 1em; }
+  .listen .service img {
+    width: 6em; }
+  .listen .service .name {
+    margin-top: 1em; }
 
-.page-heading {
-  font-size: 24px;
-  font-weight: 900;
-  padding-left: 0; }
-
-.page-subheading {
-  font-size: 20px;
-  padding-left: 0; }
-
-.error-page-heading {
-  font-size: 40px;
-  font-weight: 900;
-  padding-left: 0; }
-
-.error-page-subheading {
-  font-size: 34px;
-  padding-left: 0; }
-
-.post-list {
-  margin-top: 60px; }
-  .post-list li h2 {
-    padding-left: 0;
-    font-size: 30px; }
-    .post-list li h2 a {
-      color: #231F20; }
+.hosts {
+  margin-top: 6em;
+  text-align: center; }
+  .hosts h1 {
+    margin-bottom: 1em; }
+  .hosts img {
+    width: 10em;
+    border-radius: 100%; }
+  .hosts .name {
+    font-size: 1.4em;
+    margin-top: 0.5em; }
+  .hosts p {
+    margin-bottom: 0; }
 
 header {
-  background: #231F20;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  bottom: 0; }
-  header .content {
-    float: right;
-    padding: 40px; }
-  header a {
-    display: block; }
-    header a p {
-      color: #F8EC23; }
-    header a:hover {
-      text-decoration: none; }
-  header .subscribe {
-    margin-top: 100px; }
-    header .subscribe .service img {
-      width: 60px;
-      padding: 10px; }
-    header .subscribe .service .name {
-      margin-top: 15px; }
-  header .hosts {
-    margin-top: 100px; }
-    header .hosts .host {
-      margin-bottom: 20px; }
-    header .hosts img {
-      width: 130px;
-      border-radius: 100%;
-      padding: 10px; }
-    header .hosts .name {
-      margin-top: 15px; }
-    header .hosts p {
-      margin-bottom: 0; }
-  header h1, header p {
-    color: white; }
-  header h1 {
-    font-size: 26px;
-    padding-left: 0;
-    margin-bottom: 20px; }
+  padding: 2.5em;
+  padding-top: 5em;
+  text-align: center; }
+  header img {
+    width: 16em; }
 
 @media screen and (max-width: 40em) {
-  .subscribe {
-    display: none; }
-
-  .hosts {
-    display: none; }
-
-  header {
-    height: 100%;
-    position: static; }
-    header .content {
-      float: none; } }
-@media screen and (max-width: 64em) {
-  header {
-    position: static; } }
+  .intro h2 {
+    font-size: 1.4em;
+    line-height: 1em; } }

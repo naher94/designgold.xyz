@@ -2,28 +2,59 @@
 layout: default
 ---
 
-<div class="home cell medium-9 large-8">
+<section class="intro">
+  <h2>{{ site.description }}</h2>
+</section>
 
-  <h1 class="page-heading">Design Gold</h1>
-  <h2 class="page-subheading">{{ site.description }}</h2>
+<section class="listen grid-x">
+  <h1 class="cell">Listen On</h1>
+  <div class="cell small-6 medium-3">
+    <a href="https://podcasts.apple.com/gb/podcast/design-gold/id1460573900">
+      <div class="service">
+        <img src="img/applepodcast.svg">
+        <p class="name">Apple Podcast</p>
+      </div>
+    </a>
+  </div>
+  <div class="cell small-6 medium-3">
+    <a href="https://open.spotify.com/show/4ehtIPWPm1RcRdKKZrfjaJ">
+      <div class="service">
+        <img src="img/spotify.svg">
+        <p class="name">Spotify</p>
+      </div>
+    </a>
+  </div>
+  <div class="cell small-6 medium-3">
+    <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8yZjcxMTdjL3BvZGNhc3QvcnNz">
+      <div class="service">
+        <img src="img/googlepodcast.svg">
+        <p class="name">Google Podcast</p>
+      </div>
+    </a>
+  </div>
+  <div class="cell small-6 medium-3">
+    <a href="https://anchor.fm/s/2f7117c/podcast/rss">
+      <div class="service">
+        <img src="img/rss.svg">
+        <p class="name">RSS Feed</p>
+      </div>
+    </a>
+  </div>
 
-  <ul class="post-list">
-    {% assign episode_order = site.episodes | sort: 'date' | reverse %}
-    {% for episode in episode_order %}
-      <li>
-        <span class="post-meta">{{ episode.date | date: "%b %-d, %Y" }} • Episode {{episode.number}}</span>
+</section>
 
-        <h2>
-          {{ episode.title }}
-<!--          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>-->
-        </h2>
-        
-        <p>{{episode.content}}</p>
-        
-        {% assign youtubelink = {{episode.youtube}} | split: "=" %}
-        <iframe src="https://www.youtube.com/embed/{{ youtubelink[1] }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </li>
-    {% endfor %}
-  </ul>
-  
-</div>
+<section class="hosts grid-x">
+  <h1 class="cell">Hosts</h1>
+  <div class="host cell small-6">
+    <img src="img/rehan.png">
+    <p class="name">Rehan Butt</p>
+    <a href="https://twitter.com/naher94/" target="_blank"><p>@naher94</p></a>
+    <a href="https://rehanbutt.com" target="_blank"><p>rehanbutt.com</p></a>
+  </div>
+  <div class="host small-6">
+    <img src="img/jonathan.png">
+    <p class="name">Jonathan Calzada</p>
+    <a href="https://twitter.com/JonnyCalz/" target="_blank"><p>@JonnyCalz</p></a>
+    <a href="http://jonathan.jcboom.com" target="_blank"><p>jcboom.com</p></a>
+  </div>
+</section>

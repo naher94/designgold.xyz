@@ -5,8 +5,8 @@
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  
-  
+
+
   <meta name="keywords" content="Design Gold,Technology,Design,UX,UI,Web,Branding,Podcast">
     <meta name="author" content="Rehan Butt">
     <link rel="icon" type="image/png" href="../img/favicon.png"/>
@@ -15,11 +15,10 @@
     <link rel="apple-touch-icon" type="image/png" href="../img/favicon.png" sizes="76x76"/>
     <link rel="apple-touch-icon" type="image/png" href="../img/favicon.png" sizes="120x120"/>
     <link rel="apple-touch-icon" type="image/png" href="../img/favicon.png" sizes="152x152"/>
-  
-  
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/foundation.css" | prepend: site.baseurl }}">
+
+
+  <link rel="stylesheet" href="{{ "/css/app.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/designgold.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
