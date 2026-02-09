@@ -1,0 +1,17 @@
+// Colors
+$black-gold: #231F20;
+$gold: #F8EC23;
+$gold-hover: darken(#F8EC23,20);
+$pure-white: #FFFFFF;
+$text-black: #000000;
+$text-muted: rgba(#000, 0.5);
+$hover-bg: #f4f4f4;
+$trailer-gold: #f2d048;
+$trailer-bg: rgba($trailer-gold, 0.2);
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+$lato: 'Lato', sans-serif;
+$regular: 400;
+$bold: 700;
+$black: 900;
