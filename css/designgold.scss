@@ -68,7 +68,6 @@ img {
     line-height: 1.5;
     font-weight: $regular;
     color: $text-black;
-    max-width: 600px;
     @include breakpoint(small only) {
       font-size: 1.1em;
     }
