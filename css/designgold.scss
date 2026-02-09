@@ -56,7 +56,7 @@ img {
 .intro, .hosted-by, .listen-on{
   margin-bottom: 2em;
   p{
-    font-size: 1.25em;
+    font-size: 1.5em;
     line-height: 1.5;
     color: $text-black;
     margin-bottom: 0;
@@ -83,12 +83,14 @@ img {
     text-decoration: underline;
   }
   .host-photo{
-    width: 44px;
-    height: 44px;
-    vertical-align: middle;
-    &.placeholder{
-      display: inline-block;
-      background: #d8d8d8;
+    width: 2.25em;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5);
+    &:first-of-type{
+      rotate: -8deg;
+    }
+    &:last-of-type{
+      rotate: 6deg;
     }
   }
 }
