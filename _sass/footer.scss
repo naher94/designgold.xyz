@@ -33,7 +33,7 @@
   .footer-column{
     h4{
       font-size: 1em;
-      font-weight: $black;
+      font-weight: $space-grotesk-bold;
       margin-bottom: 0.5em;
     }
     ul{
@@ -45,7 +45,7 @@
       margin-bottom: 0.25em;
     }
     a{
-      font-weight: $regular;
+      // font-weight: $regular;
       color: $text-black;
       text-decoration: none;
       &:hover{
