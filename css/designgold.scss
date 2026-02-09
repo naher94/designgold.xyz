@@ -27,12 +27,7 @@ h1{
 }
 
 ::selection {
-  color: $pure-white;
-  background: $gold;
-}
-
-/* Code for Firefox */
-::-moz-selection {
+  //TODO update this styling
   color: $pure-white;
   background: $gold;
 }
@@ -61,16 +56,11 @@ img {
   margin-bottom: 6em;
 }
 
-//******* Intro Styling
-.intro{
+.intro, .hosted-by, .listen-on{
   p{
     font-size: 1.25em;
     line-height: 1.5;
-    // font-weight: $space-grotesk-regular;
     color: $text-black;
-    @include breakpoint(small only) {
-      font-size: 1.1em;
-    }
   }
 }
 
@@ -91,9 +81,6 @@ img {
     align-items: center;
     gap: 0.4em;
     flex-wrap: wrap;
-    @include breakpoint(small only) {
-      font-size: 1em;
-    }
   }
   a{
     color: $text-black;
@@ -113,8 +100,8 @@ img {
   }
 }
 
-//******* Listen Inline Styling
-.listen-inline{
+//******* Listen On Styling
+.listen-on{
   margin-top: 1.5em;
   p{
     font-size: 1.25em;
@@ -147,16 +134,13 @@ img {
     color: $text-black;
     margin-top: 2.5em;
     margin-bottom: 1.5em;
-    @include breakpoint(small only) {
-      // font-size: 1.4em;
-    }
   }
 
   .episode-card{
     display: block;
     text-decoration: none;
     color: $text-black;
-    padding: 0.5em;
+    padding: 0.3125em;
     border-radius: 10px;
     transition: background-color 0.2s ease;
 
@@ -186,7 +170,7 @@ img {
     img{
       width: 60px;
       height: 60px;
-      border-radius: 0.5em; //TODO update to nesting
+      border-radius: 5px; //TODO update to nesting
       object-fit: cover;
       @include breakpoint(small only) {
         width: 48px;
