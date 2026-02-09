@@ -45,9 +45,9 @@
       margin-bottom: 0.25em;
     }
     a{
-      // font-weight: $regular;
       color: $text-black;
       text-decoration: none;
+      // TODO update hover effect
       &:hover{
         text-decoration: underline;
       }
