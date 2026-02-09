@@ -45,6 +45,24 @@ layout: default
 <!-- 
 <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/gb/podcast/design-gold/id1460573900"></iframe> -->
 
+<section class="episodes">
+  <h1>Episodes</h1>
+  {% for episode in site.data.episodes %}
+  <a href="{{ episode.link }}" target="_blank" class="episode-card">
+    <div class="episode-card-inner grid-x">
+      <div class="episode-artwork cell shrink">
+        <img src="{{ episode.image }}" alt="{{ episode.title }} artwork" loading="lazy">
+      </div>
+      <div class="episode-info cell auto">
+        <p class="episode-meta">{{ episode.pubDate }} &middot; {{ episode.duration }}</p>
+        <h2 class="episode-title">{{ episode.title }} &rarr;</h2>
+        <p class="episode-description">{{ episode.description }}</p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</section>
+
 <section class="hosts grid-x">
   <h1 class="cell">Hosts</h1>
   <div class="host cell small-6">

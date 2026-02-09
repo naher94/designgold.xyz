@@ -15,7 +15,3 @@ url: "https://designgold.xyz" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 
-collections:
-  episodes:
-    output: true
-    permalink: /:path
