@@ -16,8 +16,14 @@
   }
 
   .footer-logo{
-    img{
+    svg{
+      // TODO make relative sizing
       width: 126px;
+      @media (prefers-color-scheme: dark) {
+        #wordmark{
+          fill: $pure-white;
+        }
+      }
     }
   }
 
