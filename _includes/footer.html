@@ -1,11 +1,61 @@
-<footer>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EE7XMYXN00"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <a href="{{ site.baseurl }}/">
+        {%- include_relative /img/logo.svg -%}
+      </a>
+    </div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Show</h4>
+        <ul>
+          <li><a href="#">Latest Episode</a></li>
+          <li><a href="#">Podcast Trailer</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Hosts</h4>
+        <ul>
+          <li><a href="{{ site.rehan-url }}" target="_blank">Rehan Butt</a></li>
+          <li><a href="{{ site.lily-url }}" target="_blank">Lily Samuels</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Listen</h4>
+        <ul>
+          <li><a href="https://podcasts.apple.com/gb/podcast/design-gold/id1460573900" target="_blank">Apple Podcasts</a></li>
+          <li><a href="https://open.spotify.com/show/4ehtIPWPm1RcRdKKZrfjaJ" target="_blank">Spotify</a></li>
+          <li><a href="https://www.youtube.com/@designgold" target="_blank">YouTube</a></li>
+          <li><a href="https://pca.st/podcast/design-gold" target="_blank">Pocket Casts</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="copyright">copyright &copy; {{ site.time | date: '%Y' }}</span>
+    <span class="rainbow-text">The gold at the end of the rainbow <span class="rainbow-emoji" id="rainbow-trigger">🌈<span class="party-parrot" id="party-parrot">🦜</span></span></span>
+  </div>
 
-  gtag('config', 'G-EE7XMYXN00');
-</script>
+  <script>
+    // Party Parrot Easter Egg
+    document.getElementById('rainbow-trigger').addEventListener('click', function() {
+      var parrot = document.getElementById('party-parrot');
+      parrot.classList.remove('visible');
+      // Force reflow to restart animation
+      void parrot.offsetWidth;
+      parrot.classList.add('visible');
+      setTimeout(function() {
+        parrot.classList.remove('visible');
+      }, 3000);
+    });
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-49316908-8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-49316908-8');
+  </script>
 </footer>
