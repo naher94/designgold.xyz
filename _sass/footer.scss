@@ -52,11 +52,6 @@
     }
     a{
       color: semantic-color(text);
-      text-decoration: none;
-      // TODO update hover effect
-      &:hover{
-        text-decoration: underline;
-      }
     }
   }
 
