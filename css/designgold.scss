@@ -8,7 +8,8 @@
 
 body {
   font-family: $space-grotesk;
-  color: $pure-black;
+  color: semantic-color(text);
+  background-color: semantic-color(background);
   font-weight: $space-grotesk-regular;
   font-size: 16px;
 }
@@ -29,7 +30,7 @@ h1{
 }
 
 a{
-  color: $pure-black;
+  color: semantic-color(text);
   text-decoration: underline;
   // TODO update the hover effect
   &:hover{
@@ -58,16 +59,16 @@ img {
   p{
     font-size: 1.5em;
     line-height: 1.5;
-    color: $pure-black;
+    color: semantic-color(text);
     margin-bottom: 0;
   }
 }
 
 //******* Gold Brick Easter Egg //TODO update this
 .gold-brick{
-  color: $gold;
+  color: semantic-color(gold);
   font-weight: $black;
-  text-shadow: 0 0 0 $gold;
+  text-shadow: 0 0 0 semantic-color(gold);
 }
 
 //******* Hosted By Styling
@@ -79,7 +80,7 @@ img {
     flex-wrap: wrap;
   }
   a{
-    color: $pure-black;
+    color: semantic-color(text);
     text-decoration: underline;
     &:hover{
       // TODO add hover effect
@@ -108,7 +109,7 @@ img {
   .host-photo{
     width: 2.25em;
     border-radius: 8px;
-    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px -5px semantic-color(shadow);
     transition: $tight-spring;
   }
 }
@@ -116,7 +117,7 @@ img {
 //******* Listen On Styling
 .listen-on{
   a{
-    color: $pure-black;
+    color: semantic-color(text);
     text-decoration: underline;
     white-space: nowrap;
   }
@@ -141,7 +142,7 @@ img {
   .episode-card{
     display: block;
     text-decoration: none;
-    color: $pure-black;
+    color: semantic-color(text);
     padding: 0.625em;
     border-radius: 20px;
     margin-block-end: 0.5em;
@@ -171,8 +172,8 @@ img {
 
     &:hover{
       text-decoration: none;
-      background-color: $hover-bg;
-      color: $pure-black;
+      background-color: semantic-color(card-hover-bg);
+      color: semantic-color(text);
       opacity: 1;
       .arrow-animation{
         span{
@@ -188,9 +189,9 @@ img {
     }
 
     &.trailer-card{
-      background-color: rgba($gold, 0.25);
+      background-color: semantic-color(trailer-card-bg);
       &:hover{
-        background-color: rgba($gold, 0.35);
+        background-color: semantic-color(trailer-card-hover-bg);
       }
     }
   }
@@ -217,19 +218,19 @@ img {
 
   .episode-meta{
     font-size: 0.875em;
-    color: $text-muted;
+    color: semantic-color(text-muted);
     margin-bottom: 0.15em;
   }
 
   .episode-title{
     font-size: 1.25em;
-    color: $pure-black;
+    color: semantic-color(text);
     margin-bottom: 0.2em;
     line-height: 1.3;
   }
 
   .episode-description{
-    color: $text-muted;
+    color: semantic-color(text-muted);
     line-height: 1.5;
     margin-bottom: 0;
   }

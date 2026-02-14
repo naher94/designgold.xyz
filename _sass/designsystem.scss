@@ -12,6 +12,54 @@ $dark-gold: #EEC21F;
 $text-muted: rgba($pure-black, 0.5);
 $hover-bg: #f4f4f4;
 
+// Semantic Colors
+$semantic-colors:(
+  light:(
+    text: $pure-black,
+    text-muted: rgba($pure-black, 0.5),
+    background: $pure-white,
+    card-hover-bg: $hover-bg,
+    border: rgba($pure-black, 0.1),
+    shadow: rgba($pure-black, 0.5),
+    gold: $gold,
+    trailer-card-bg: rgba($gold, 0.25),
+    trailer-card-hover-bg: rgba($gold, 0.35),
+  ),
+  dark:(
+    text: $pure-white,
+    text-muted: rgba($pure-white, 0.5),
+    background: #1A1A1A,
+    card-hover-bg: #2A2A2A,
+    border: rgba($pure-white, 0.1),
+    shadow: rgba($pure-white, 0.2),
+    gold: $gold,
+    trailer-card-bg: rgba($gold, 0.20),
+    trailer-card-hover-bg: rgba($gold, 0.30),
+  ),
+);
+
+// Helper function to build CSS custom property name
+@function compose-color($color-key) {
+  @return '--color-#{$color-key}';
+}
+
+// Function to be called inline for color mapping
+@function semantic-color($color-key) {
+  @return var(--color-#{$color-key});
+}
+
+// Generate CSS custom properties from semantic map
+:root{
+  @each $key, $value in map-get($semantic-colors, 'light') {
+    #{compose-color($key)}: #{$value};
+  }
+  @media (prefers-color-scheme: dark) {
+    @each $key, $value in map-get($semantic-colors, 'dark') {
+      #{compose-color($key)}: #{$value};
+    }
+  }
+}
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 $lato: 'Lato', sans-serif;
