@@ -188,9 +188,9 @@ img {
     }
 
     &.trailer-card{
-      background-color: $trailer-bg;
+      background-color: rgba($gold, 0.25);
       &:hover{
-        background-color: rgba($trailer-gold, 0.3);
+        background-color: rgba($gold, 0.35);
       }
     }
   }
