@@ -146,11 +146,45 @@ img {
     border-radius: 20px;
     margin-block-end: 0.5em;
     transition: background-color 0.2s ease;
+
+    .arrow-animation{
+      display: inline-flex;
+      // margin-left: 0.25rem;
+      // vertical-align: middle;
+      span{
+        display: inline-flex;
+        transition: $tight-spring;
+        svg{
+          width: 0.6em;
+          height: 0.6em;
+          fill: currentColor;
+        }
+        &.first{
+          transform: translateX(0);
+        }
+        &.second{
+          opacity: 0;
+          transform: translateX(-0.5em);
+        }
+      }
+    }
+
     &:hover{
       text-decoration: none;
       background-color: $hover-bg;
       color: $text-black;
       opacity: 1;
+      .arrow-animation{
+        span{
+          &.first{
+            transform: translateX(0.15em);
+          }
+          &.second{
+            opacity: 1;
+            transform: translateX(0.05em);
+          }
+        }
+      }
     }
 
     &.trailer-card{
