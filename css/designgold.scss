@@ -24,9 +24,7 @@ h1{
 }
 
 ::selection {
-  //TODO update this styling
-  // color: $pure-white;
-  // background: $gold;
+  background: $gold;
 }
 
 a{
@@ -86,7 +84,6 @@ img {
     text-decoration-color: color-mix(in srgb, currentColor 30%, transparent);
     transition: $tight-spring;
     &:hover{
-      // TODO add hover effect
       text-decoration-thickness: 0.1em;
       text-decoration-color: color-mix(in srgb, currentColor 100%, transparent);
       &:first-of-type{
