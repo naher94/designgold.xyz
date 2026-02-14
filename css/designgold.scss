@@ -81,13 +81,7 @@ img {
   }
   a{
     color: semantic-color(text);
-    // text-decoration: underline;
-    // text-underline-offset: 0.1em;
-    // text-decoration-color: color-mix(in srgb, currentColor 30%, transparent);
-    // transition: $tight-spring;
     &:hover{
-      // text-decoration-thickness: 0.1em;
-      // text-decoration-color: color-mix(in srgb, currentColor 100%, transparent);
       &:first-of-type{
       .host-photo{
         rotate: -3deg;
