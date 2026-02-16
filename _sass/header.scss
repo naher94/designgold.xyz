@@ -1,6 +1,10 @@
 header{
   padding-top: 3em;
   --cover-radius: 20px;
+  @include breakpoint(small only){
+    padding-inline: 0.625em;
+    padding-top: 2em;
+  }
   .logo{
     display: inline-block;
     position: relative;
@@ -21,6 +25,9 @@ header{
     }
     img{
       width: 150px;
+      @include breakpoint(small only){
+        width: 100px;
+      }
     }
   }
 }

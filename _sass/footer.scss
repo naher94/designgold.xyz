@@ -3,6 +3,12 @@
   margin-bottom: 4em;
   border-top: 1px solid semantic-color(border);
   padding-top: 2em;
+  @include breakpoint(small only){
+    padding-inline: 0.625em;
+    padding-top: 3em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
 
   .footer-content{
     display: flex;
