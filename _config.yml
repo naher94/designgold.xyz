@@ -14,7 +14,7 @@ url: "https://designgold.xyz" # the base hostname & protocol for your site
 rehan-url: https://rehanbutt.com
 lily-url: https://lilysamuels.com
 jonathan-url: https://jonnycal.com
-version: 3.0
+version: 3.0.0
 # Build settings
 markdown: kramdown
 

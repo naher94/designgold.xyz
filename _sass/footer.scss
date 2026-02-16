@@ -91,6 +91,9 @@
       align-items: flex-start;
       gap: 0;
     }
+    a{
+      color: semantic-color(text);
+    }
   }
 
   .copyright{
