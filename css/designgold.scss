@@ -201,6 +201,36 @@ img {
         background-color: semantic-color(trailer-card-hover-bg);
       }
     }
+
+    &.promo-card{
+      padding: 1em 1.25em;
+      &:hover{
+        background-color: semantic-color(trailer-card-bg);
+      }
+      @include breakpoint(small only){
+        padding: 1.25em;
+      }
+      .promo-title{
+        font-size: 1.5em;
+        font-weight: $space-grotesk-bold;
+        margin-bottom: 0.2em;
+        line-height: 1.3;
+        @include breakpoint(small only){
+          font-size: 1.25em;
+        }
+      }
+      .promo-subtitle{
+        color: semantic-color(text-muted);
+        line-height: 1.5;
+        margin-bottom: 0.75em;
+      }
+      .promo-follow{
+        margin-bottom: 0;
+        a{
+          color: semantic-color(text);
+        }
+      }
+    }
   }
 
   .episode-card-inner{

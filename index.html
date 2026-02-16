@@ -21,6 +21,14 @@ layout: default
 </section>
 
 <section class="episodes cell">
+  <!-- Promo Card -->
+  <div class="episode-card trailer-card promo-card">
+    <h2 class="promo-title">We've Been Refining the Gold.</h2>
+    <p class="promo-subtitle">New episodes. Better questions. Deeper insights. Launching soon.</p>
+    <p class="promo-follow">Follow on <a href="https://open.spotify.com/show/4ehtIPWPm1RcRdKKZrfjaJ" target="_blank">Spotify</a> &middot; <a href="https://podcasts.apple.com/gb/podcast/design-gold/id1460573900" target="_blank">Apple Podcasts</a></p>
+  </div>
+
+  {% comment %}
   <!-- Podcast Trailer -->
   <a href="#" class="episode-card trailer-card">
     <div class="episode-card-inner">
@@ -33,6 +41,7 @@ layout: default
       </div>
     </div>
   </a>
+  {% endcomment %}
 
   <!-- New Episodes (Season 3+) -->
   {% for episode in site.data.episodes %}
