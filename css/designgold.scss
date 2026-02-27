@@ -1,69 +1,41 @@
 ---
   # Front matter comment to ensure Jekyll properly reads file.
 ---
-
-//******* Variables
-
-// Numbers
-$color-percentage: 5%;
-
-// Colors
-$black-gold: #231F20;
-$gold: #F8EC23;
-$gold-hover: darken(#F8EC23,20);
-$pure-white: #FFFFFF;
-
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
-$lato: 'Lato', sans-serif;
-$regular: 400;
-$bold: 700;
-$black: 900;
-//******* End of Variables
+@import 'app';
+@import 'designsystem';
+@import 'header';
+@import 'footer';
 
 body {
-  font-family: $lato;
-  color: $pure-white;
-  font-weight: $bold;
-  background: $black-gold;
+  font-family: $space-grotesk;
+  color: semantic-color(text);
+  background-color: semantic-color(background);
+  font-weight: $space-grotesk-regular;
   font-size: 16px;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: $lato;
+h1,h2,h3,h4,h5,h6 {
+  font-family: $space-grotesk;
 }
 
 h1{
   font-size: 2em;
-  font-weight: $bold;
+  font-weight: $space-grotesk-bold;
 }
 
 ::selection {
-  color: $black-gold;
-  background: $gold;
-}
-
-/* Code for Firefox */
-::-moz-selection {
-  color: $black-gold;
   background: $gold;
 }
 
 a{
-  img{
-    &:hover{
-      opacity: 0.7;
-    }
-  }
-  p{
-    color: $gold;
-    &:hover{
-      text-decoration: none;
-      color: $gold-hover;
-    }
+  color: semantic-color(text);
+  text-decoration: underline;
+  text-underline-offset: 0.1em;
+  text-decoration-color: color-mix(in srgb, currentColor 30%, transparent);
+  transition: $tight-spring;
+  &:hover{
+    text-decoration-thickness: 0.1em;
+    text-decoration-color: color-mix(in srgb, currentColor 100%, transparent);
   }
 }
 
@@ -74,108 +46,244 @@ img {
   -ms-user-select: none;
   user-select: none;
   user-drag: none;
-  -moz-user-select: none;
   -webkit-user-drag: none;
 }
 
 .content-container{
-  margin-top: 4em;
+  margin-top: 2em;
   margin-bottom: 6em;
-}
-
-.intro{
-  h2{
-    font-size: 2em;
-    line-height: 1.2em;
+  @include breakpoint(small only){
+    margin-top: 1em;
+    margin-bottom: 3em;
   }
 }
 
-.listen{
-  margin-top: 6em;
-  text-align: center;
-  h1{
-    margin-bottom: 1em;
+.intro, .hosted-by, .listen-on{
+  margin-bottom: 2em;
+  @include breakpoint(small only){
+    padding-inline: 0.625em;
   }
-  .service{
-    img{
-      width: 6em;
-    }
-    .name{
-      margin-top: 1em;
-    }
-  }
-}
-
-.hosts{
-  margin-top: 6em;
-  text-align: center;
-  h1{
-    margin-bottom: 1em;
-  }
-  img{
-    width: 10em;
-    border-radius: 100%;
-  }
-
-  .name{
-    font-size: 1.4em;
-    margin-top: 0.5em;
-  }
-
   p{
+    font-size: 1.5em;
+    line-height: 1.5;
+    color: semantic-color(text);
+    margin-bottom: 0;
+    @include breakpoint(small only){
+      font-size: 1.25em;
+    }
+  }
+}
+
+//******* Gold Brick Easter Egg //TODO update this
+.gold-brick{
+  color: semantic-color(gold);
+  font-weight: $black;
+  text-shadow: 0 0 0 semantic-color(gold);
+}
+
+//******* Hosted By Styling
+.hosted-by{
+  p{
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    flex-wrap: wrap;
+  }
+  a{
+    color: semantic-color(text);
+    &:hover{
+      &:first-of-type{
+      .host-photo{
+        rotate: -3deg;
+      }
+    }
+    &:last-of-type{
+      .host-photo{
+        rotate: 1deg;
+      }
+    }
+    }
+    &:first-of-type{
+      .host-photo{
+        rotate: -8deg;
+      }
+    }
+    &:last-of-type{
+      .host-photo{
+        rotate: 6deg;
+      }
+    }
+  }
+  .host-photo{
+    width: 2.25em;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px -5px semantic-color(shadow);
+    transition: $tight-spring;
+  }
+}
+
+//******* Listen On Styling
+.listen-on{
+  a{
+    color: semantic-color(text);
+    white-space: nowrap;
+  }
+  .listen-icon{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 0.15em;
+  }
+}
+
+//******* Episode Styling
+.episodes{
+  margin-top: 3em;
+  .early-days-header{
+    font-size: 1.75em;
+    font-weight: $space-grotesk-bold;
+    margin-top: 2.5em;
+    margin-bottom: .5em;
+  }
+
+  .episode-card{
+    display: block;
+    text-decoration: none;
+    color: semantic-color(text);
+    padding: 0.625em;
+    border-radius: 20px;
+    margin-block-end: 0.5em;
+    transition: background-color 0.2s ease;
+
+    .arrow-animation{
+      display: inline-flex;
+      // margin-left: 0.25rem;
+      // vertical-align: middle;
+      span{
+        display: inline-flex;
+        transition: $tight-spring;
+        svg{
+          width: 0.6em;
+          height: 0.6em;
+          fill: currentColor;
+        }
+        &.first{
+          transform: translateX(0);
+        }
+        &.second{
+          opacity: 0;
+          transform: translateX(-0.5em);
+        }
+      }
+    }
+
+    &:hover{
+      text-decoration: none;
+      background-color: semantic-color(card-hover-bg);
+      color: semantic-color(text);
+      opacity: 1;
+      .arrow-animation{
+        span{
+          &.first{
+            transform: translateX(0.15em);
+          }
+          &.second{
+            opacity: 1;
+            transform: translateX(0.05em);
+          }
+        }
+      }
+    }
+
+    &.trailer-card{
+      background-color: semantic-color(trailer-card-bg);
+      &:hover{
+        background-color: semantic-color(trailer-card-hover-bg);
+      }
+    }
+
+    &.promo-card{
+      padding: 1em 1.25em;
+      &:hover{
+        background-color: semantic-color(trailer-card-bg);
+      }
+      @include breakpoint(small only){
+        padding: 1.25em;
+      }
+      .promo-title{
+        font-size: 1.5em;
+        font-weight: $space-grotesk-bold;
+        margin-bottom: 0.2em;
+        line-height: 1.3;
+        @include breakpoint(small only){
+          font-size: 1.25em;
+        }
+      }
+      .promo-subtitle{
+        color: semantic-color(text-muted);
+        line-height: 1.5;
+        margin-bottom: 0.75em;
+      }
+      .promo-follow{
+        margin-bottom: 0;
+        a{
+          color: semantic-color(text);
+        }
+      }
+    }
+  }
+
+  .episode-card-inner{
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .episode-artwork{
+    margin-right: 1em;
+    flex-shrink: 0;
+    img{
+      width: 60px;
+      height: 60px;
+      border-radius: 10px; //TODO update to nesting
+      object-fit: cover;
+      @include breakpoint(small only) {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+
+  .episode-meta{
+    font-size: 0.875em;
+    color: semantic-color(text-muted);
+    margin-bottom: 0.15em;
+  }
+
+  .episode-title{
+    font-size: 1.25em;
+    color: semantic-color(text);
+    margin-bottom: 0.2em;
+    line-height: 1.3;
+  }
+
+  .episode-description{
+    color: semantic-color(text-muted);
+    line-height: 1.5;
     margin-bottom: 0;
   }
 }
-
 
 //******* Error Styling
 .error-page{
   h1{
     font-size: 3em;
-  }
-}
-
-//******* End of Error Styling
-
-
-
-//******* Header Styling
-
-header{
-  padding: 2.5em;
-  padding-top: 5em;
-  text-align: center;
-  img{
-    width: 16em;
-  }
-}
-//******* End of Header Styling
-
-
-
-//******* Mobile Styling
-
-// Measurments pulled from foundation css file
-// Mobile Styling
-@media screen and (max-width: 40em) {
-  .intro{
-    h2{
-      font-size: 1.4em;
-      line-height: 1em;
-    }
-  }
-  .error-page{
-    h1{
+    @include breakpoint(small only) {
       font-size: 2.5em;
     }
-    h2{
+  }
+  h2{
+    @include breakpoint(small only) {
       font-size: 1.8em;
     }
   }
 }
-
-// Tablet Styling
-@media screen and (max-width: 64em) {
-
-}
-//******* End of Mobile Styling

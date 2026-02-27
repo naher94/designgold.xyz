@@ -2,61 +2,86 @@
 layout: default
 ---
 
-<section class="intro">
-  <h2>{{ site.description }}</h2>
+<section class="intro cell">
+  <p>{{site.description}}
+    <!-- TODO update this brick dot -->
+    <!-- <span class="gold-brick">.</span> -->
+  </p>
 </section>
 
-<section class="listen grid-x">
-  <h1 class="cell">Listen On</h1>
-  <div class="cell small-6 medium-3">
-    <a href="https://podcasts.apple.com/gb/podcast/design-gold/id1460573900">
-      <div class="service">
-        <img src="img/applepodcast.svg">
-        <p class="name">Apple Podcast</p>
-      </div>
-    </a>
-  </div>
-  <div class="cell small-6 medium-3">
-    <a href="https://open.spotify.com/show/4ehtIPWPm1RcRdKKZrfjaJ">
-      <div class="service">
-        <img src="img/spotify.svg">
-        <p class="name">Spotify</p>
-      </div>
-    </a>
-  </div>
-  <div class="cell small-6 medium-3">
-    <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8yZjcxMTdjL3BvZGNhc3QvcnNz">
-      <div class="service">
-        <img src="img/googlepodcast.svg">
-        <p class="name">Google Podcast</p>
-      </div>
-    </a>
-  </div>
-  <div class="cell small-6 medium-3">
-    <a href="https://anchor.fm/s/2f7117c/podcast/rss">
-      <div class="service">
-        <img src="img/rss.svg">
-        <p class="name">RSS Feed</p>
-      </div>
-    </a>
-  </div>
-
+<section class="hosted-by cell">
+  <p>Hosted by <a href="{{ site.rehan-url }}" target="_blank"><img src="img/rehan.jpg" alt="Rehan Butt" class="host-photo"> Rehan Butt</a> &amp; <a href="{{ site.lily-url }}" target="_blank"><img src="img/lily.jpg" alt="Lily Samuels" class="host-photo"> Lily Samuels</a></p>
 </section>
-<!-- 
-<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/gb/podcast/design-gold/id1460573900"></iframe> -->
 
-<section class="hosts grid-x">
-  <h1 class="cell">Hosts</h1>
-  <div class="host cell small-6">
-    <img src="img/rehan.png">
-    <p class="name">Rehan Butt</p>
-    <a href="https://twitter.com/naher94/" target="_blank"><p>@naher94</p></a>
-    <a href="https://rehanbutt.com" target="_blank"><p>rehanbutt.com</p></a>
+<section class="listen-on cell">
+  <p>Listen on
+    <a href="https://podcasts.apple.com/gb/podcast/design-gold/id1460573900" target="_blank"><img src="img/applepodcast.svg" alt="Apple Podcasts" class="listen-icon"> Apple Podcasts</a>,
+    <a href="https://open.spotify.com/show/4ehtIPWPm1RcRdKKZrfjaJ" target="_blank"><img src="img/spotify.svg" alt="Spotify" class="listen-icon"> Spotify</a>,
+    <a href="https://www.youtube.com/@designgold" target="_blank"><img src="img/youtube.svg" alt="YouTube" class="listen-icon"> YouTube</a>,
+    <a href="https://pca.st/podcast/design-gold" target="_blank"><img src="img/pocketcasts.svg" alt="Pocket Casts" class="listen-icon"> Pocket Casts</a>
+    <!-- ,<a href="{{ site.baseurl }}/feed.xml">RSS</a> -->
+  </p>
+</section>
+
+<section class="episodes cell">
+  <!-- Promo Card -->
+  <div class="episode-card trailer-card promo-card">
+    <h2 class="promo-title">We've Been Refining the Gold.</h2>
+    <p class="promo-subtitle">New episodes. Better questions. Deeper insights. Launching soon.</p>
+    <p class="promo-follow">Follow on <a href="https://open.spotify.com/show/4ehtIPWPm1RcRdKKZrfjaJ" target="_blank">Spotify</a> &middot; <a href="https://podcasts.apple.com/gb/podcast/design-gold/id1460573900" target="_blank">Apple Podcasts</a></p>
   </div>
-  <div class="host small-6">
-    <img src="img/jonathan.png">
-    <p class="name">Jonathan Calzada</p>
-    <a href="https://twitter.com/JonnyCalz/" target="_blank"><p>@JonnyCalz</p></a>
-    <a href="https://jonnycal.com" target="_blank"><p>jonnycal.com</p></a>
-  </div>
+
+  {% comment %}
+  <!-- TODO note the footer link as well needs updating -->
+  <!-- Podcast Trailer -->
+  <a href="#" class="episode-card trailer-card">
+    <div class="episode-card-inner">
+      <div class="episode-artwork">
+        <img src="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/397463/397463-1687754165827-e95e9099613fe.jpg" alt="Podcast Trailer artwork" loading="lazy">
+      </div>
+      <div class="episode-info">
+        <h2 class="episode-title">Podcast Trailer <span class="arrow-animation"><span class="first">{% include arrow-right.svg %}</span><span class="second">{% include angle-right.svg %}</span></span></h2>
+        <p class="episode-description">At the end of the movie all of us have this shared redemption. You want to be in a movie where your part works. That's the main thing. No matter how.</p>
+      </div>
+    </div>
+  </a>
+  {% endcomment %}
+
+  <!-- New Episodes (Season 3+) -->
+  {% for episode in site.data.episodes %}
+    {% if episode.season >= 3 %}
+    <a href="{{ episode.link }}" target="_blank" class="episode-card">
+      <div class="episode-card-inner">
+        <div class="episode-artwork">
+          <img src="{{ episode.image }}" alt="{{ episode.title }} artwork" loading="lazy">
+        </div>
+        <div class="episode-info">
+          <p class="episode-meta">{{ episode.pubDate }} &middot; {{ episode.duration }}</p>
+          <h2 class="episode-title">{{ episode.title }} <span class="arrow-animation"><span class="first">{% include arrow-right.svg %}</span><span class="second">{% include angle-right.svg %}</span></span></h2>
+          <p class="episode-description">{{ episode.description }}</p>
+        </div>
+      </div>
+    </a>
+    {% endif %}
+  {% endfor %}
+
+  <!-- The Early Days Section -->
+  <h2 class="early-days-header">The early days of Design Gold</h2>
+
+  {% for episode in site.data.episodes %}
+    {% if episode.season < 3 %}
+    <a href="{{ episode.link }}" target="_blank" class="episode-card">
+      <div class="episode-card-inner">
+        <div class="episode-artwork">
+          <img src="img/logo-v1.png" alt="{{ episode.title }} artwork" loading="lazy">
+        </div>
+        <div class="episode-info">
+          <p class="episode-meta">{{ episode.pubDate }} &middot; {{ episode.duration }}</p>
+          <h2 class="episode-title">{{ episode.title }} <span class="arrow-animation"><span class="first">{% include arrow-right.svg %}</span><span class="second">{% include angle-right.svg %}</span></span></h2>
+          <p class="episode-description">{{ episode.description }}</p>
+        </div>
+      </div>
+    </a>
+    {% endif %}
+  {% endfor %}
 </section>
