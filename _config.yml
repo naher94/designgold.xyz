@@ -19,7 +19,12 @@ twitter: https://x.com/designgoldmedia
 instagram: https://www.instagram.com/designgoldmedia/
 threads: https://www.threads.com/@designgoldmedia
 
-version: 3.0.1
+apple-podcast: https://podcasts.apple.com/gb/podcast/design-gold/id1460573900
+spotify: https://open.spotify.com/show/4ehtIPWPm1RcRdKKZrfjaJ
+youtube: https://www.youtube.com/@designgoldmedia
+pocketcasts: https://pca.st/podcast/design-gold
+
+version: 3.0.2
 # Build settings
 markdown: kramdown
 
