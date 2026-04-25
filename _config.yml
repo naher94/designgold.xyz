@@ -24,7 +24,7 @@ spotify: https://open.spotify.com/show/4ehtIPWPm1RcRdKKZrfjaJ
 youtube: https://www.youtube.com/@designgoldmedia
 pocketcasts: https://pca.st/podcast/design-gold
 
-version: 3.0.1
+version: 3.0.2
 # Build settings
 markdown: kramdown
 
