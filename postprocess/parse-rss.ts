@@ -45,7 +45,13 @@ function formatDate(dateStr: string): string {
 }
 
 function stripHtml(str: string): string {
-  return String(str).replace(/<[^>]*>/g, "").trim();
+  let text = String(str);
+  text = text.replace(/<br\s*\/?>/gi, "\n");
+  text = text.replace(/<\/p>/gi, "\n");
+  text = text.replace(/<[^>]*>/g, "");
+  text = text.replace(/^[ \t]*\d{1,2}:\d{2}(?::\d{2})?[ \t]+.*$/gm, "");
+  text = text.replace(/\n{3,}/g, "\n\n");
+  return text.trim();
 }
 
 const episodes: Episode[] = items.map((item: any) => {
