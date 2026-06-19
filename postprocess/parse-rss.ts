@@ -44,8 +44,18 @@ function formatDate(dateStr: string): string {
   });
 }
 
-function stripHtml(str: string): string {
-  let text = String(str);
+function extractText(value: unknown): string {
+  if (typeof value === "string") return value;
+  if (value && typeof value === "object") {
+    const obj = value as Record<string, unknown>;
+    if (typeof obj["#text"] === "string") return obj["#text"];
+    if (typeof obj["#cdata"] === "string") return obj["#cdata"];
+  }
+  return String(value ?? "");
+}
+
+function stripHtml(value: unknown): string {
+  let text = extractText(value);
   text = text.replace(/<br\s*\/?>/gi, "\n");
   text = text.replace(/<\/p>/gi, "\n");
   text = text.replace(/<[^>]*>/g, "");
@@ -64,7 +74,7 @@ const episodes: Episode[] = items.map((item: any) => {
 
   return {
     title: String(item.title ?? ""),
-    description: stripHtml(item.description ?? ""),
+    description: stripHtml(item.description),
     pubDate: formatDate(item.pubDate),
     rawDate: dateObj.toISOString(),
     duration: formatDuration(item["itunes:duration"] ?? "0"),
